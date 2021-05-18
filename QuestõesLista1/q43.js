@@ -5,4 +5,6 @@ var c = Number(input('Informe o valor de c: '));
 var d = Number(input('Informe o valor de d: '));
 var e = Number(input('Informe o valor de e: '));
 var f = Number(input('Informe o valor de f: '));
-console.log('x = ', (((c * e) - (b * f))/((a * e) - (b * d))), '\ny = ', (((a * f) - (c * d))/((a * e) - (b * d))));
+var x = (((c * e) - (b * f))/((a * e) - (b * d)));
+var y = (((a * f) - (c * d))/((a * e) - (b * d)));
+console.log('x = ', x, '\ny = ', y);

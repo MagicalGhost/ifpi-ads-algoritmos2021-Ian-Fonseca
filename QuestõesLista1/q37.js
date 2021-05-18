@@ -1,3 +1,6 @@
 const input = require('prompt-sync')();
 var dias = Number(input('Informe um valor de dias: '));
-console.log('A quantidade informada é equivalente a: ', ((dias - dias%365)/365), ' ano(s) ', ((dias - ((dias - dias%365) + ((dias%365)%30)))/30), ' mes(es) ', ((dias%365)%30), ' dia(s)');
+var anos = ((dias - dias%365)/365);
+var mes = ((dias - ((dias - dias%365) + ((dias%365)%30)))/30);
+var dia = ((dias%365)%30);
+console.log(anos, ' ano(s) ', mes, ' mes(es) ', dia, ' dia(s)');

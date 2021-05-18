@@ -5,4 +5,5 @@ var nota2 = Number(input('Informe a segunda nota do aluno: '));
 var peso2 = Number(input('Informe o peso da segunda nota: '));
 var nota3 = Number(input('Informe a terceira nota do aluno: '));
 var peso3 = Number(input('Informe o peso da terceira nota: '));
-console.log('A média ponderada desse aluno é: ' + (((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3))/(peso1 + peso2 + peso3)));
+var media_ponderada = ((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3))/(peso1 + peso2 + peso3);
+console.log(media_ponderada);

@@ -1,3 +1,6 @@
 const input = require('prompt-sync')();
 var seg = Number(input('Informe um valor de segundos: '));
-console.log('O numero fornecido é equivalente a: ', ((seg - seg%3600)/3600), 'h ', (((seg - seg%60)/60)%60), 'm ', (seg%60), 's');
+var horas = ((seg - seg%3600)/3600);
+var minutos = (((seg - seg%60)/60)%60);
+var segundos = seg%60;
+console.log(horas, 'h ', minutos, 'm ', segundos, 's');

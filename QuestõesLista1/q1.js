@@ -1,3 +1,4 @@
 const input = require('prompt-sync')();
-var vms = Number(input('Informe a velocidade em m/s: '));
-console.log('A velocidade informada (' + vms + 'm/s) é equivalente a ' + (vms*3.6) + 'km/h');
+var vms = Number(input('Informe uma velocidade em m/s: '));
+var vkmh = vms * 3.6;
+console.log(vkmh);
