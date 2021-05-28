@@ -1,25 +1,124 @@
-const input = require('prompt-sync')(); //na medida do possivel...
+const input = require('prompt-sync')(); //na medida do possivel... ATUALIZADO, PROGRAMAÇÃO ORIENTADA A GAMBIARRA (P.O.G)
 
-function idade(dia_atual, mes_atual, ano_atual, dia, mes, ano) {
-    var idad = ano_atual - ano;
-    var mesv = mes + mes_atual;
-    var diasv = dia + dia_atual;
-    if (mes > mes_atual) {
-        idad--;
-        mesv--;
-        console.log('anos: ', idad, 'meses: ', mesv, 'dias: ', dia_atual);
-    } else if(mes == mes_atual){
-        if (dia > dia_atual) {
-            idad--;
-            mesv--;
-            console.log('anos: ', idad, 'meses: ', mesv, 'dias: ', diasv);
+function teste(diaa, mesa, anoa, dian, mesn, anon){
+    var diat = 0;
+    var mest = 0;
+    var anot = 0;
+    if (diaa == dian) {
+        diat = 0;
+        if (mesa == mesn) {
+            mest = 0;
+            if (anoa == anon) {
+                anoa = 0;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else if(anoa > anon) {
+                anot = anoa - anon;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else {
+                console.log('Data informada invalida, o ser ainda nao possui anos de vida!');
+            }
+        } else if(mesa > mesn) {
+            mest = mesa - mesn;
+            if (anoa == anon) {
+                anoa = 0;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else if(anoa > anon) {
+                anot = anoa - anon;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else {
+                console.log('Data informada invalida, o ser ainda nao possui anos de vida!');
+            }
         } else {
-            diasv = dia_atual - dia;
-            mesv = 0;
-            console.log('anos: ', idad, 'mes: ', mesv, 'dias: ', diasv);
+            if (anoa == anon) {
+                anoa = 0;
+                mest = mesa - mesn;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else if(anoa > anon) {
+                anot = anoa - anon - 1;
+                mest = (12 - mesn) + mesa;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else {
+                console.log('Data informada invalida, o ser ainda nao possui anos de vida!');
+            }
+        }
+    } else if(diaa > dian) {
+        if (mesa == mesn) {
+            mest = 0;
+            diat = diaa - dian;
+            if (anoa == anon) {
+                anoa = 0;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else if(anoa > anon) {
+                anot = anoa - anon;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else {
+                console.log('Data informada invalida, o ser ainda nao possui anos de vida!');
+            }
+        } else if(mesa > mesn) {
+            mest = mesa - mesn;
+            diat = (diaa - dian)%30;
+            if (anoa == anon) {
+                anoa = 0;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else if(anoa > anon) {
+                anot = anoa - anon;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else {
+                console.log('Data informada invalida, o ser ainda nao possui anos de vida!');
+            }
+        } else {
+            diat = diaa - dian;
+            if (anoa == anon) {
+                anoa = 0;
+                mest = mesa - mesn;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else if(anoa > anon) {
+                anot = anoa - anon - 1;
+                mest = (12 - mesn) + mesa;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else {
+                console.log('Data informada invalida, o ser ainda nao possui anos de vida!');
+            }
         }
     } else {
-        console.log('anos: ', idad, 'meses: ', (mes_atual - mes));
+        if (mesa == mesn) {
+            mest = 0;
+            diat = diaa;
+            if (anoa == anon) {
+                anoa = 0;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else if(anoa > anon) {
+                anot = anoa - anon;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else {
+                console.log('Data informada invalida, o ser ainda nao possui anos de vida!');
+            }
+        } else if(mesa > mesn) {
+            diat = dian - diaa;
+            mest = mesa - mesn + 1;
+            if (anoa == anon) {
+                anoa = 0;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else if(anoa > anon) {
+                anot = anoa - anon;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else {
+                console.log('Data informada invalida, o ser ainda nao possui anos de vida!');
+            }
+        } else {
+            diat = diaa;
+            if (anoa == anon) {
+                anoa = 0;
+                mest = mesa - mesn;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else if(anoa > anon) {
+                anot = anoa - anon - 1;
+                mest = (12 - mesn) + mesa;
+                console.log('Tempo de vida:\n', anot, 'anos', mest, 'mes(es)', diat, 'dia(s)!');
+            } else {
+                console.log('Data informada invalida, o ser ainda nao possui anos de vida!');
+            }
+        }
     }
 }
 
@@ -30,4 +129,5 @@ var dian = Number(input('Informe o dia de nascimento: '));
 var mesn = Number(input('Informe o mes de nascimento: '));
 var anon = Number(input('Informe o ano de nascimento: '));
 
-idade(diaa, mesa, anoa, dian, mesn, anon);
+
+teste(diaa, mesa, anoa, dian, mesn, anon);
