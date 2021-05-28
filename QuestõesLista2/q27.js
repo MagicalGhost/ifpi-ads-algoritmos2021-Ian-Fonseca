@@ -1,19 +1,25 @@
-const input = require('prompt-sync')();
+const input = require('prompt-sync')(); //na medida do possivel...
 
 function idade(dia_atual, mes_atual, ano_atual, dia, mes, ano) {
-    idad = ano_atual - ano;
+    var idad = ano_atual - ano;
+    var mesv = mes + mes_atual;
+    var diasv = dia + dia_atual;
     if (mes > mes_atual) {
         idad--;
-        console.log(idad);
+        mesv--;
+        console.log('anos: ', idad, 'meses: ', mesv, 'dias: ', dia_atual);
     } else if(mes == mes_atual){
         if (dia > dia_atual) {
             idad--;
-            console.log(idad);
+            mesv--;
+            console.log('anos: ', idad, 'meses: ', mesv, 'dias: ', diasv);
         } else {
-            console.log(idad);
+            diasv = dia_atual - dia;
+            mesv = 0;
+            console.log('anos: ', idad, 'mes: ', mesv, 'dias: ', diasv);
         }
     } else {
-        console.log(idad);
+        console.log('anos: ', idad, 'meses: ', (mes_atual - mes));
     }
 }
 
