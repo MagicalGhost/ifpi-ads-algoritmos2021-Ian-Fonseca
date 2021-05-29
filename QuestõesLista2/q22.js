@@ -1,50 +1,25 @@
-const input = require('prompt-sync')(); //INCOMPLETA
+const input = require('prompt-sync')();
 
 function horajogo(hi, mi, hf, mf) {
     var ht = 0;
     var mt = 0;
     if (hf == hi) {
         if (mf == mi) {
-            console.log('Duração do jogo de 24h:00!');
+            console.log('Duração do jogo de 24:00hrs!');
         } else if(mf > mi) {
             mt = mf - mi;
-            console.log('Duração do jogo: ', ht, 'h:', mt, 'min');
+            console.log('Duração do jogo: ', ht, 'h', mt, 'min');
         } else {
-            console.log('Valores invalidos!');
+            console.log('Valores inseridos invalidos!');
         }
-
-
-
-
-    } else if(hf > hi){
-        if (mf == mi) {
-            ht = hf - hi;
-            mt = 0;
-            console.log('Duração do jogo: ', ht, 'h:', mt, 'min');
-        } else if(mf > mi) {
-            ht = hf - hi;
-            mt = mf - mi;
-            console.log('Duração do jogo: ', ht, 'h:', mt, 'min');
-        } else {
-            if (condition) {
-                
-            } else {
-                
-            }
-            mt = 60 - mi + mf;
-
-        }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    } else if(hf > hi) {
+        ht = (hf * 60 + mf) - (hi * 60 + mi);
+        mt = ht%60;
+        console.log('Duração do jogo: ', (ht - mt)/60, 'h', mt, 'min');
     } else {
-
+        ht = (((24 - hi) * 60) + mi) + (hf * 60 + mf);
+        mt = ht%60;
+        console.log('Duração do jogo: ', (ht - mt)/60, 'h', mt, 'min');
     }
 }
 
