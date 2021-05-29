@@ -10,7 +10,8 @@ function horajogo(hi, mi, hf, mf) {
             mt = mf - mi;
             console.log('Duração do jogo: ', ht, 'h', mt, 'min');
         } else {
-            console.log('Valores inseridos invalidos!');
+            mt = mi - mf;
+            console.log('Duração do jogo: ', 23, 'h', mt, 'min');
         }
     } else if(hf > hi) {
         ht = (hf * 60 + mf) - (hi * 60 + mi);
