@@ -1,4 +1,4 @@
-const input = require('prompt-sync')(); //na medida do possivel... ATUALIZADO, PROGRAMAÇÃO ORIENTADA A GAMBIARRA (P.O.G)
+const input = require('prompt-sync')();
 
 function teste(diaa, mesa, anoa, dian, mesn, anon){
     var diat = 0;
