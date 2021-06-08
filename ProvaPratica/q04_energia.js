@@ -16,7 +16,7 @@ function calculo_energia_eletrica(kwh) { // função pra fazer o talão, calcula
     var bandeira = 0; // calcula quanto vai pagar por cada 100kwh consumido de acordo com a bandeira, no caso da questao: vermelha R$ 8.00
     var total = divida + icms + pis + taxa_iluminacao + bandeira; // calcula o total a se pagar, ou seja, a soma de todos os impostos, taxas e o valor de cada kwh
     if (kwh <= 30) {
-        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${total}\nBandeira R$ ${bandeira} (x bandeira)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
+        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${total}\nBandeira R$ ${bandeira} (${bandeira/8} bandeiras)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
     } else if(kwh > 30 && kwh <= 100) {
         divida = kwh * 0.59;
         icms = divida * 0.25;
@@ -30,7 +30,7 @@ function calculo_energia_eletrica(kwh) { // função pra fazer o talão, calcula
             bandeira = (kwh - kwh%100)/100 * 8;
         }
         total = divida + icms + pis + taxa_iluminacao + bandeira;
-        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${total}\nBandeira R$ ${bandeira} (x bandeira)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
+        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${total}\nBandeira R$ ${bandeira} (${bandeira/8} bandeiras)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
     } else {
         divida = kwh * 0.75;
         icms = divida * 0.25;
@@ -38,7 +38,7 @@ function calculo_energia_eletrica(kwh) { // função pra fazer o talão, calcula
         taxa_iluminacao = divida * 0.6;
         bandeira = (kwh - kwh%100)/100 * 8;
         total = divida + icms + pis + taxa_iluminacao + bandeira;
-        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${total}\nBandeira R$ ${bandeira} (x bandeira)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
+        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${total}\nBandeira R$ ${bandeira} (${bandeira/8} bandeiras)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
     }
 }
 
