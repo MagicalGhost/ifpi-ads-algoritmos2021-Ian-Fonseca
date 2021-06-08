@@ -1,15 +1,15 @@
 const input = require('prompt-sync')();
 
 function main() {
-    var crit_a = Number(input('Informe um valor para o criterio a de 0 a 100: '))
-    var crit_b = Number(input('Informe um valor para o criterio b de 0 a 100: '))
-    var crit_c = Number(input('Informe um valor para o criterio c de 0 a 100: '))
+    var crit_a = Number(input('Informe um valor para o criterio a de 0 a 100: ')); //recebe a nota para o criterio A
+    var crit_b = Number(input('Informe um valor para o criterio b de 0 a 100: ')); //recebe a nota para o criterio B
+    var crit_c = Number(input('Informe um valor para o criterio c de 0 a 100: ')); //recebe a nota para o criterio C
     
     score1(crit_a, crit_b, crit_c);
     score2(crit_a, crit_b, crit_c);
 }
 
-function score1(ca, cb, cc) {
+function score1(ca, cb, cc) { //Calcula o score antigo e imprime a faixa do score
     var valor_em_ca = ca * 2.6;
     var valor_em_cb = cb * 5.7;
     var valor_em_cc = cc * 1.7;
@@ -26,7 +26,7 @@ function score1(ca, cb, cc) {
     }
 }
 
-function score2(ca, cb, cc) {
+function score2(ca, cb, cc) { // Calcula o score novo e imprime a faixa do score
     var valor_em_ca = ca * 6.2;
     var valor_em_cb = cb * 1.9;
     var valor_em_cc = cc * 1.9;

@@ -1,14 +1,14 @@
 const input = require('prompt-sync')();
 
 function main() {
-    var leitura_atual = Number(input('Informe a leitura atual: '));
-    var leitura_anterior = Number(input('informe a leitura anterior: '));
-    var kwh = leitura_atual - leitura_anterior;
+    var leitura_atual = Number(input('Informe a leitura atual: ')); //recebe o ultimo valor do mes
+    var leitura_anterior = Number(input('informe a leitura anterior: ')); //recebe o valor do mes anterior
+    var kwh = leitura_atual - leitura_anterior; // calcula quanto usou no mes atual em kwh
 
-    calculo_energia_eletrica(kwh);
+    calculo_energia_eletrica(kwh); 
 }
 
-function calculo_energia_eletrica(kwh) {
+function calculo_energia_eletrica(kwh) { // função pra fazer o talão, calcula todos os impostos, a taxa, e imprime o talão respeitando as regras de condições
     var divida = 0;
     var icms = 0;
     var pis = 0;

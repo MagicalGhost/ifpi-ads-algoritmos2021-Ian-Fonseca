@@ -18,12 +18,12 @@ function calcular_comissao(valor, s) {
         faixa = valor - 5000;
         comissao = faixa * 0.05;
         salario_final = comissao + s;
-        console.log(`Valor de comissão: 5% Faixa: ${faixa}\nGanhos com comissão: ${comissao}\nSalário final: ${salario_final}`); // se a comissão estiver maior que 5k e menor que 10k então a comissão será de 5% sobre a faixa de 2k
+        console.log(`Valor de comissão: 5% Faixa: ${faixa}\nGanhos com comissão: ${comissao}\nSalário final: ${salario_final}`); // se a comissão estiver maior que 5k e menor que 10k então a comissão será de 5% sobre a faixa
     } else if(valor > 10000 && valor <= 30000) {
         faixa = valor - 10000;
         comissao = faixa * 0.1 + (valor - 5000 * 0.05);
         salario_final = comissao + s;
-        console.log(`Valor de comissão: 10% Faixa: ${faixa}\nGanhos com comissão: ${comissao}\nSalário final: ${salario_final}`); // se a comissão estiver maior que 10k e menor que 30k então a comissão será de 10% sobre a faixa de 3k
+        console.log(`Valor de comissão: 10% Faixa: ${faixa}\nGanhos com comissão: ${comissao}\nSalário final: ${salario_final}`); // se a comissão estiver maior que 10k e menor que 30k então a comissão será de 10% sobre a faixa
     } else {
         comissao = valor * 0.2;
         salario_final = comissao + s;
