@@ -17,11 +17,15 @@ function idade(dia_atual, mes_atual, ano_atual, dia, mes, ano) {
     }
 }
 
-var diaa = Number(input('Informe o dia atual: '));
-var mesa = Number(input('Informe o mes atual: '));
-var anoa = Number(input('Informe o ano atual: '));
-var dian = Number(input('Informe o dia de nascimento: '));
-var mesn = Number(input('Informe o mes de nascimento: '));
-var anon = Number(input('Informe o ano de nascimento: '));
+function main() {
+    var diaa = Number(input('Informe o dia atual: '));
+    var mesa = Number(input('Informe o mes atual: '));
+    var anoa = Number(input('Informe o ano atual: '));
+    var dian = Number(input('Informe o dia de nascimento: '));
+    var mesn = Number(input('Informe o mes de nascimento: '));
+    var anon = Number(input('Informe o ano de nascimento: '));
 
-idade(diaa, mesa, anoa, dian, mesn, anon);
+    idade(diaa, mesa, anoa, dian, mesn, anon);
+}
+
+main();

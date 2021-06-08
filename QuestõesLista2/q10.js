@@ -32,8 +32,12 @@ function validador(dia, mes, ano) {
     }
 }
 
-var dia = Number(input('Informe um dia: '));
-var mes = Number(input('Informe um mes: '));
-var ano = Number(input('Informe um ano: '));
+function main() {
+    var dia = Number(input('Informe um dia: '));
+    var mes = Number(input('Informe um mes: '));
+    var ano = Number(input('Informe um ano: '));
 
-validador(dia, mes, ano);
+    validador(dia, mes, ano);
+}
+
+main();

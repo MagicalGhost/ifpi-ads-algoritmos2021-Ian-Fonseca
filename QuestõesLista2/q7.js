@@ -14,7 +14,11 @@ function triangulo(lado1, lado2, lado3){
     }
 }
 
-var lado_1 = Number(input('Informe o primeiro lado: '));
-var lado_2 = Number(input('Informe o segundo lado: '));
-var lado_3 = Number(input('Informe o terceiro lado: '));
-triangulo(lado_1, lado_2, lado_3);
+function main() {
+    var lado_1 = Number(input('Informe o primeiro lado: '));
+    var lado_2 = Number(input('Informe o segundo lado: '));
+    var lado_3 = Number(input('Informe o terceiro lado: '));
+    triangulo(lado_1, lado_2, lado_3);
+}
+
+main();

@@ -10,5 +10,9 @@ function compara(num1){
     }
 }
 
-var num1 = Number(input('Informe um número de dois digitos: '));
-compara(num1);
+function main() {
+    var num1 = Number(input('Informe um número de dois digitos: '));
+    compara(num1);
+}
+
+main();

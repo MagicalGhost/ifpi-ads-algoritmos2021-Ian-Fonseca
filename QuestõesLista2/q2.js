@@ -9,7 +9,10 @@ function compara(num1, num2){
         console.log('Números iguais');
     }
 }
+function main() {
+    var num1 = Number(input('Informe o primeiro número: '));
+    var num2 = Number(input('Informe o segundo número: '));
+    compara(num1, num2); 
+}
 
-var num1 = Number(input('Informe o primeiro número: '));
-var num2 = Number(input('Informe o segundo número: '));
-compara(num1, num2);
+ main();

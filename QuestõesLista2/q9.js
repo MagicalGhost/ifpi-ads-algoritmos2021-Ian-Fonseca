@@ -16,5 +16,9 @@ function primo(num){
     }
 }
 
-var numero = Number(input('Informe um valor entre 0 e 100: '));
-primo(numero);
+function main() {
+    var numero = Number(input('Informe um valor entre 0 e 100: '));
+    primo(numero);
+}
+
+main();
