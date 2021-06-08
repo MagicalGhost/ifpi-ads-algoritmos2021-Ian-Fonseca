@@ -9,13 +9,14 @@ function main() {
 }
 
 function calculo_energia_eletrica(kwh) { // função pra fazer o talão, calcula todos os impostos, a taxa, e imprime o talão respeitando as regras de condições
-    var divida = 0;
-    var icms = 0;
-    var pis = 0;
-    var taxa_iluminacao = 0;
-    var bandeira = 0;
+    var divida = 0; // calcula quanto vai pagar por cada kwh
+    var icms = 0; // imposto ICMS
+    var pis = 0; // imposto PIS/CONFIS
+    var taxa_iluminacao = 0; // calcula a taxa de iluminação
+    var bandeira = 0; // calcula quanto vai pagar por cada 100kwh consumido de acordo com a bandeira, no caso da questao: vermelha R$ 8.00
+    var total = divida + icms + pis + taxa_iluminacao + bandeira; // calcula o total a se pagar, ou seja, a soma de todos os impostos, taxas e o valor de cada kwh
     if (kwh <= 30) {
-        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${divida + icms + pis + taxa_iluminacao + bandeira}\nBandeira R$ ${bandeira} (x bandeira)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
+        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${total}\nBandeira R$ ${bandeira} (x bandeira)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
     } else if(kwh > 30 && kwh <= 100) {
         divida = kwh * 0.59;
         icms = divida * 0.25;
@@ -28,14 +29,16 @@ function calculo_energia_eletrica(kwh) { // função pra fazer o talão, calcula
         if (kwh >= 100) {
             bandeira = (kwh - kwh%100)/100 * 8;
         }
-        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${divida + icms + pis + taxa_iluminacao + bandeira}\nBandeira R$ ${bandeira} (x bandeira)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
+        total = divida + icms + pis + taxa_iluminacao + bandeira;
+        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${total}\nBandeira R$ ${bandeira} (x bandeira)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
     } else {
         divida = kwh * 0.75;
         icms = divida * 0.25;
         pis = divida * 0.15;
         taxa_iluminacao = divida * 0.6;
         bandeira = (kwh - kwh%100)/100 * 8;
-        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${divida + icms + pis + taxa_iluminacao + bandeira}\nBandeira R$ ${bandeira} (x bandeira)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
+        total = divida + icms + pis + taxa_iluminacao + bandeira;
+        console.log(`Consumo: ${kwh} KWh\nValor faturado: R$ ${total}\nBandeira R$ ${bandeira} (x bandeira)\nICMS R$ ${icms}\nPIS/CONFIS R$ ${pis}\nTaxa iluminação: ${taxa_iluminacao}`);
     }
 }
 
