@@ -1,23 +1,29 @@
 const input = require('prompt-sync')();
 
 function main() {
-    var numero = Number(input('Informe um número: '));
+    
 
-    listaDivisores(numero);
+    listaDivisores();
 }
 
-function listaDivisores(num) {
-    console.log(`Número lido: ${num}\nLista de divisores:`);
+function listaDivisores() {
+    var num = Number(input('Informe um número: '));
 
-    if(num >= 0) {
-        for (let i = 0; i <= num; i++) {
-            if(num%i == 0) {
-                console.log(i);
+    while(num != 0) {
+        console.log(`Número lido: ${num}\nLista de divisores:`);
+
+        if(num >= 0) {
+            for (let i = 0; i <= num; i++) {
+                if(num%i == 0) {
+                    console.log(i);
+                }
             }
+        } else {
+            console.log('Digite apenas valores positivos!');
         }
-    } else {
-        console.log('Digite apenas valores positivos!');
+        num = Number(input('Informe um número: '));
     }
+    
 }
 
 main();
