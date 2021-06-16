@@ -13,7 +13,7 @@ function main() {
 }
 
 function binario(dec){
-    return (dec >>> 0).toString(2);
+    return (dec).toString(2);
 }
 
 function hexa(dec) {
