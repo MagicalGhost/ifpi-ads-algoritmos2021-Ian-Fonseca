@@ -2,19 +2,15 @@ const input = require('prompt-sync')();
 
 function main() {
     console.log('CANDIDATOS:\n- Serra = 45\n- Dilma = 13\n- Ciro Gomes = 23\n- Para indeciso = 99\n- Para outros = 98\n- Para nulo/branco = 0\n');
-
-    eleicao();
-}
-
-function eleicao() {
-    var voto = 1;
-    var serra = 0;
-    var dilma = 0;
-    var ciro = 0;
-    var indeciso = 0;
-    var outros = 0;
-    var nulo = 0;
-    var total = 0;
+    
+    let voto = 1;
+    let serra = 0;
+    let dilma = 0;
+    let ciro = 0;
+    let indeciso = 0;
+    let outros = 0;
+    let nulo = 0;
+    let total = 0;
     while(voto != -1) {
         voto = Number(input('Em quem você votaria? '));
         if (voto == 45) {

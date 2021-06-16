@@ -1,7 +1,7 @@
 const input = require('prompt-sync')();
 
 function main() {
-    var numero = Number(input('Informe um número: '));
+    let numero = Number(input('Informe um número: '));
 
     divisao(numero);
 }

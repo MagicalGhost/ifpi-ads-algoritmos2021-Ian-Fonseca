@@ -1,15 +1,15 @@
 const input = require('prompt-sync')();
 
 function main() {
-    var x = Number(input('Informe um valor para X: '));
+    let x = Number(input('Informe um valor para X: '));
 
     lista(x);
 }
 
 function lista(x) {
-    var x1 = Number(input('Informe um outro valor: '));
-    var x2 = Number(input('Informe um outro valor: '));
-    var soma = x1 + x2;
+    let x1 = Number(input('Informe um outro valor: '));
+    let x2 = Number(input('Informe um outro valor: '));
+    let soma = x1 + x2;
     while(soma != x) {
         console.log('***************************************************')
         x1 = Number(input('Informe um outro valor: '));

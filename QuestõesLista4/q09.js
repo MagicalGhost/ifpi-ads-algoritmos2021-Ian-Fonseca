@@ -1,30 +1,27 @@
 const input = require('prompt-sync')();
 
 function main() {
-    
-    teste();
-}
-
-function teste() {
-    var numero_prova = 1;
-    var quantidade_nadadores = 1;
-    var somaa = 0;
-    var somab = 0;
+    let numero_prova = 1;
+    let quantidade_nadadores = 1;
+    let somaa = 0;
+    let somab = 0;
+    let i = 1;
+    let j = 1;
     while(numero_prova > 0) {
 
         numero_prova = Number(input('Informe o número da prova: '));
         quantidade_nadadores = Number(input('Informe a quantidade de nadadores: '));
 
-        for (let i = 1; i <= numero_prova; i++) {
+        while(i <= numero_prova) {
 
             console.log(`Prova: ${numero_prova}`);
 
-            for (let j = 1; j <= quantidade_nadadores; j++) {
+            while(j <= quantidade_nadadores) {
 
-                var nome = Number(input('Informe o nome do nadador: '));
-                var lugar = Number(input('Informe a classificação do nadador: '));
-                var tempo = Number(input('informe o tempo do nadador: '));
-                var clube = String(input('Informe o clube do nadador: '));
+                let nome = Number(input('Informe o nome do nadador: '));
+                let lugar = Number(input('Informe a classificação do nadador: '));
+                let tempo = Number(input('informe o tempo do nadador: '));
+                let clube = String(input('Informe o clube do nadador: '));
 
                 if (lugar == 1) {
                     if (clube == 'a') {
@@ -57,8 +54,10 @@ function teste() {
                         somab = somab + 0;
                     }
                 }
+                j++;
                 
             }
+            i++;
         }
     }
     console.log(`Total de pontos clube A: ${somaa}\nTotal de pontos clube B: ${somab}`);

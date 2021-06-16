@@ -1,12 +1,6 @@
 const input = require('prompt-sync')();
 
 function main() {
-    
-
-    listaDivisores();
-}
-
-function listaDivisores() {
     var num = Number(input('Informe um número: '));
 
     while(num != 0) {

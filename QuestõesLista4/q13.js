@@ -1,15 +1,15 @@
 const input = require('prompt-sync')();
 
 function main() {
-    var salario = Number(input('Informe o salário: '));
+    let salario = Number(input('Informe o salário: '));
 
     reajustesalario(salario);
 }
 
 function reajustesalario(s) {
-    var ns = 0;      // NOVO SALARIO
-    var ssa = 0;     // SOMA DOS SALARIOS ATUAIS
-    var ssr = 0;     // SOMA DOS SALARIOS REAJUSTADOS
+    let ns = 0;      // NOVO SALARIO
+    let ssa = 0;     // SOMA DOS SALARIOS ATUAIS
+    let ssr = 0;     // SOMA DOS SALARIOS REAJUSTADOS
     
     while(s != 0) {
         if (s >= 0 && s <= 2999.99) {
@@ -28,7 +28,7 @@ function reajustesalario(s) {
         console.log(`Novo salário: ${ns}\n`);
         s = Number(input('Informe outro salário: '));
     }
-    var ds = ssr - ssa; // DIFERENÇA ENTRE AS DUAS SOMAS
+    let ds = ssr - ssa; // DIFERENÇA ENTRE AS DUAS SOMAS
 
     console.log(`\n**************************************\nSoma dos salários atuais: ${ssa}\nSoma dos salários reajustados: ${ssr}\nDiferença entre as duas somas: ${ds}`)
 }

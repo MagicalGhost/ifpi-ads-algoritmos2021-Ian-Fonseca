@@ -1,13 +1,9 @@
 const input = require('prompt-sync')();
 
 function main() {
-    funcao();
-}
-
-function funcao() {
-    var j1 = 0;
-    var j2 = 0;
-    var p = 0;
+    let j1 = 0;
+    let j2 = 0;
+    let p = 0;
     while((j1 < 21 || (j1 - j2) < 2) && (j2 < 21 || (j2 - j1) < 2)) {
         p = Number(input('Informe quem fez o ponto (1 ou 2): '));
         if (p == 1) {

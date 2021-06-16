@@ -1,8 +1,8 @@
 const input = require('prompt-sync')();
 
 function main() {
-    var x = Number(input('Informe um valor para X: '));
-    var n = Number(input('Informe um valor para N: '));
+    let x = Number(input('Informe um valor para X: '));
+    let n = Number(input('Informe um valor para N: '));
 
     divisao(x, n);
 }
