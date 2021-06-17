@@ -5,7 +5,14 @@ function main() {
     let i = 0;
 
     while(num != 0) {
-        console.log(`Número lido: ${num}\nLista de divisores:`);
+        divisores(num, i);
+        num = Number(input('Informe um número: '));
+    }
+    
+}
+
+function divisores(num, i) {
+    console.log(`Número lido: ${num}\nLista de divisores:`);
 
         if(num >= 0) {
             while(i <= num) {
@@ -17,9 +24,6 @@ function main() {
         } else {
             console.log('Digite apenas valores positivos!');
         }
-        num = Number(input('Informe um número: '));
-    }
-    
 }
 
 main();
