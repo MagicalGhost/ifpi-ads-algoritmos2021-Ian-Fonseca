@@ -5,8 +5,9 @@ function main() {
     let quantidade_nadadores = 1;
     let somaa = 0;
     let somab = 0;
-    let i = 1;
+    let i = 0;
     let j = 1;
+    
     while(numero_prova > 0) {
 
         numero_prova = Number(input('Informe o número da prova: '));
