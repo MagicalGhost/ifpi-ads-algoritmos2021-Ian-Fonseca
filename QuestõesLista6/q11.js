@@ -14,11 +14,7 @@ function main() {
 
     let matriz_transposta = transposta(matriz);
 
-    for (let i = 0; i < n; i++) {
-        for (let j = 0; j < n; j++) {
-            console.log(matriz_transposta[i][j]);
-        }
-    }
+    console.table(matriz_transposta);
 }
 
 function transposta(m) {
