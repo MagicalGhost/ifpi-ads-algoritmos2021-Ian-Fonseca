@@ -1,0 +1,15 @@
+1°) O que é, e para que é?
+	a) Pensamento Computacional
+		. Pensamento computacional se refere a resolução de problemas, e é dividido em três pilares: Abstração, Automação e Análise.
+        O Pensamento Computacional desenvolve a capacidade de compreender, de definir, de modelar, de comparar, de solucionar,
+        de automatizar e de analisar problemas (e soluções) de forma metódica e sistemática.
+
+	b) Algoritmo
+        . É uma sequencia de passos que são executados visando a resolução de um tipo determinado de problema.
+
+	c) Programação
+        . Programação é o processo de escrita ou "tradução" de um algoritmo para linguagem de programação ou linguagem de máquina.
+
+	d) Modularização com uso de Funções
+        . É um meio de segmentar o código programado em ações específicas que levam uma mesma sequência de passos para obter
+        diferentes resoluções.
