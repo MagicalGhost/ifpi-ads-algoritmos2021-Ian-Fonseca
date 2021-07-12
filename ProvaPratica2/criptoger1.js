@@ -35,7 +35,7 @@ function inverter(f) {
     return f1 + f2;
 }
 
-function vogais(f) {
+function vogais(f) { // ou vogais e números
     let frase = inverter(f);
     let novafrase = '';
 
@@ -54,6 +54,43 @@ function vogais(f) {
             novafrase += frase[i];
         }
     }
+
+    // CASO OS NÚMEROS DAS VOGAIS DEVAM SER TRANSFORMADOS EM * O CODIGO É ESSE (Para funcionar devera comentar a estrutura de repetição superior ^):
+    /*for (let i = 0; i < frase.length; i++) {
+        if (frase[i] == 'a' || frase[i] == 'A') {
+            novafrase += 1;
+        } else if(frase[i] == 'e' || frase[i] == 'E') {
+            novafrase += 2;
+        } else if(frase[i] == 'i' || frase[i] == 'I') {
+            novafrase += 3;
+        } else if(frase[i] == 'o' || frase[i] == 'O') {
+            novafrase += 4;
+        } else if(frase[i] == 'u' || frase[i] == 'U') {
+            novafrase += 5;
+        } else if(frase[i] == '1') {
+            novafrase += '*';
+        } else if(frase[i] == '2') {
+            novafrase += '**';
+        } else if(frase[i] == '3') {
+            novafrase += '***';
+        } else if(frase[i] == '4') {
+            novafrase += '****';
+        } else if(frase[i] == '5') {
+            novafrase += '*****';
+        } else if(frase[i] == '6') {
+            novafrase += '******';
+        } else if(frase[i] == '7') {
+            novafrase += '*******';
+        } else if(frase[i] == '8') {
+            novafrase += '********';
+        } else if(frase[i] == '9') {
+            novafrase += '*********';
+        } else if(frase[i] == '0') {
+            novafrase += '#';
+        } else {
+            novafrase += frase[i];
+        }
+    }*/
 
     return novafrase;
 }
@@ -92,7 +129,10 @@ function numeros(f) {
 }
 
 function consoantes(f) {
+    //se o caso das vogais estiver interpretado corretamente:
     let fr = numeros(f);
+    // caso o caso das vogais la na função for a interpretação correta:
+    //let frase = vogais(f);
     let codigo = 0;
     let novafrase = '';
 
